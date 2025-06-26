@@ -69,7 +69,6 @@ nav {
 }
 
 .hero {
-  background-image: url("https://via.placeholder.com/1200x600"); /* Use actual image URL */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -224,7 +223,6 @@ footer {
   .hero-text {
     font-weight: 400;
     font-size: 14px;
-    line-height: 15px;
     letter-spacing: -0.2px;
     color: #ffffff;
     margin-bottom: 20px;
@@ -414,6 +412,12 @@ footer {
     margin-bottom: 21px;
   }
 
+  .benefits-card-title {
+    font-family: Staatliches;
+    font-weight: 400;
+    font-size: 28px;
+  }
+
   .benefits-light-card-text {
     font-size: 15px;
     color: #686462;
@@ -441,20 +445,305 @@ footer {
 
   .benefits-light-card-bottom img:last-child {
     width: 100%;
+    height: 100%;
+  }
+
+  .benefits-title {
+    font-weight: 600;
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .benefits-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 30px;
   }
 
   .benefit-card {
     background-color: #e0d8ce;
     display: flex;
+    align-items: end;
+    gap: 13px;
+    border-radius: 20px;
+    padding: 34px 13px 7px 17px;
   }
 
-  .benefit-card img:first-child {
-    width: 107.74px;
-    height: 78px;
+  .benefit-card:first-child {
+    background-color: #322d29;
   }
 
-  .benefit-card img:last-child {
+  .benefit-card:first-child h3 {
+    color: #ffffff;
+  }
+  .benefit-card:first-child p {
+    color: #ac9c8d;
+  }
+
+  .benefit-card h3 {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .benefit-card p {
+    font-size: 14px;
+    color: #686462;
+  }
+
+  .benefit-card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .benefits-card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 270px;
+  }
+
+  .benefits-card-arrow {
     width: 21px;
     height: 21px;
+  }
+
+  .pricing {
+    background-color: #302b27;
+    border-radius: 20px;
+  }
+
+  .pricing-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 38px 0 51px;
+  }
+
+  .pricing-title {
+    font-weight: 700;
+    font-size: 23px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 28px;
+  }
+
+  .pricing-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .pricing-card {
+    color: white;
+    border-radius: 20px;
+    border: 1px solid #efe9e1;
+  }
+
+  .pricing-card-title {
+    text-align: left;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+  }
+
+  .pricing-card-price {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1%;
+  }
+
+  .pricing-card-price span:first-child {
+    vertical-align: top;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -1%;
+  }
+
+  .pricing-card-price span:last-child {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .pricing-card-taxes {
+    font-weight: 500;
+    font-size: 15px;
+    color: #998474;
+    margin-bottom: 35px;
+  }
+
+  .pricing-card ul {
+    list-style-type: disc;
+    padding-left: 10px;
+  }
+  .pricing-card li {
+    position: relative;
+    padding-left: 20px;
+
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .pricing-card li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #72383d;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+  }
+
+  .pricing-card-part {
+    padding: 33px 31px 0 29px;
+    border-bottom: 1px solid #efe9e1;
+  }
+
+  .pricing-card-part h4 {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0%;
+    margin-bottom: 10px;
+  }
+
+  .pricing-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 30px 30px 30px;
+  }
+
+  .pricing-card-link {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .exclusive {
+    background-color: #e0d8ce;
+  }
+
+  .exclusive h3 {
+    color: #322d29;
+  }
+
+  .exclusive .pricing-card-price {
+    color: #544f4a;
+  }
+
+  .exclusive .pricing-card-taxes {
+    color: #848484;
+  }
+
+  .exclusive h4 {
+    color: #000000;
+  }
+
+  .exclusive li {
+    color: #848484;
+  }
+
+  .exclusive .pricing-card-link {
+    color: #322d29;
+  }
+
+  .exclusive .pricing-card-part {
+    border-bottom: 1px solid #000000;
+  }
+
+  .middle {
+    height: 255px;
+  }
+
+  .reviews-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 44px 0 0;
+  }
+
+  .reviews-title {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #151515;
+    margin-bottom: 20px;
+  }
+
+  .reviews-text {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 31px;
+  }
+
+  .reviews-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .reviews-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 63px 30px 38px 38px;
+    background-color: #d9d0c6;
+    border-radius: 20px;
+  }
+
+  .review-mark {
+    position: absolute;
+    top: -15px;
+    right: -100px;
+    animation: rotate 5s linear infinite;
+  }
+
+  .review-person {
+    margin-bottom: 24px;
+  }
+
+  .review-name {
+    margin-bottom: 4px;
+  }
+
+  .review-country {
+    margin-bottom: 24px;
+  }
+
+  .review-stars {
+    margin-bottom: 19px;
+  }
+
+  .review-text {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 51px;
+  }
+
+ .review-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .review-line {
+  position: relative;
+  top: -9px;
+ }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
