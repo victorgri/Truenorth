@@ -20,3 +20,14 @@ for (let i = 0; i < acc.length; i++) {
     }
   });
 }
+
+function changeImage(button) {
+  const img = button.querySelector("img");
+  img.src = 'images/hero/hero-btn-img-white.png';  // змінюємо на картинку для ховера
+}
+
+function restoreImage(button) {
+  const img = button.querySelector("img");
+  img.src = "images/hero/hero-btn-img.png";  // повертаємо початкову картинку
+}
+

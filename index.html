@@ -25,9 +25,57 @@
 
 <body>
   <header>
-    <div class="container">
+    <div class="header-desc">
+      <div class="container">
+        <div class="header-desc-inner">
+          <div class="header-desc-top">
+            <div class="header-desc-leftside">
+              <img src="images/logo-white.png" alt="logo">
+              <nav class="nav-desc">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#learn">Learn</a></li>
+                  <li><a href="#benefits">Benefits</a></li>
+                  <li><a href="#pricing">Pricing</a></li>
+                  <li><a href="#reviews">Reviews</a></li>
+                  <li><a href="#faq">FAQ</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
 
-      <div class="header-inner">
+            <a href="#contact" class="header-desc-btn">Get started now</a>
+          </div>
+
+          <div class="header-desc-bottom">
+            <h2 class="header-desc-title">Master Trading with<br>Confidence & Clarity</h2>
+            <p class="header-desc-text">Learn how to trade responsibly through expert-led videos and webinars.<br>Purely
+              educational, no financial advice.</p>
+            <a href="#contact" class="header-desc-button" onmouseover="changeImage(this)"
+              onmouseout="restoreImage(this)">
+              <span>Start Learning Now</span>
+              <img src="images/hero/hero-btn-img.png" alt="Start learning button">
+            </a>
+
+
+            <div class="header-desc-bottom-info">
+              <p class="header-desc-bottom-item">
+                🔒Secure Payments via Stripe
+              </p>
+              <p class="header-desc-bottom-item">
+                Canadian-based Company
+              </p>
+              <p class="header-desc-bottom-item">
+                🎯No Advice, Education Only
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header-inner-mob">
 
         <nav>
           <img class="logo" src="images/logo.svg" alt="logo">
@@ -63,7 +111,7 @@
     <section class="hero">
       <div class="container">
         <div class="hero-inner">
-          <h2 class="hero-title">Master Trading with Confidence & Clarity</h2>
+          <h2 class="hero-title">Master Trading with<br>Confidence & Clarity</h2>
           <p class="hero-text">Learn how to trade responsibly through expert-led videos and webinars. Purely
             educational, no financial advice.</p>
           <button class="hero-button">
@@ -119,7 +167,7 @@
       </div>
     </section>
 
-    <section class="learn">
+    <section class="learn" id="learn">
       <div class="container">
         <div class="learn-inner">
           <h2>What <span>You'll Learn</span></h2>
@@ -187,7 +235,7 @@
       </div>
     </section>
 
-    <section class="benefits">
+    <section class="benefits" id="benefits">
       <div class="container">
         <div class="benefits-inner">
           <div class="benefits-light-card">
@@ -295,7 +343,7 @@
       </div>
     </section>
 
-    <section class="pricing">
+    <section class="pricing" id="pricing">
       <div class="container">
         <div class="pricing-inner">
           <h2 class="pricing-title">Clear, Transparent Pricing</h2>
@@ -390,7 +438,7 @@
       </div>
     </section>
 
-    <section class="reviews">
+    <section class="reviews" id="reviews">
       <div class="container">
         <div class="reviews-inner">
           <h2 class="reviews-title">Student Testimonials</h2>
@@ -458,7 +506,7 @@
       </div>
     </section>
 
-    <section class="faq">
+    <section class="faq" id="faq">
       <div class="container">
 
         <div class="faq-inner">
@@ -516,7 +564,7 @@
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <div class="contact-inner">
           <div class="contact-top">
@@ -577,7 +625,7 @@
         capital you can afford to lose. We are not a licensed broker or financial advisor.
       </p>
     </div>
-    
+
 
     <div class="footer-links">
       <a href="#" class="footer-link">Privacy Policy</a>
