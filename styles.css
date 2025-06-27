@@ -13,8 +13,6 @@ body {
   margin: 0;
 }
 
-
-
 header {
   background-color: #efe9e1;
 
@@ -148,6 +146,170 @@ header {
   align-items: center;
   margin-bottom: 113px;
 }
+
+.about {
+  background-color: #f8f2e6;
+  padding: 99px 144px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.about-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-title {
+  margin-bottom: 38px;
+}
+
+.about-title-mob {
+  width: 232px;
+  height: 23px;
+  display: none;
+}
+
+.about-title-desc {
+  width: 756px;
+  height: 121px;
+  display: block;
+  margin-bottom: 27px;
+}
+
+
+.about-text {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: #74706d;
+  margin-bottom: 118px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  flex-wrap: wrap;
+
+}
+
+.about-item {
+  width: fit-content;
+  background-color: #e0d8ce;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about-item-content {
+  width: 340px;
+}
+
+.about-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.about-item h3 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #161c2d;
+}
+
+.about-item-text {
+  font-size: 15px;
+  color: #686462;
+  text-align: left;
+}
+
+  .learn {
+    background-color: #302b27;
+
+    border-radius: 20px;
+  }
+
+  .learn-inner {
+    padding: 104px 0 120px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .learn h2 {
+    font-weight: 600;
+    font-style: italic;
+    font-size: 56px;
+    color: #ffffff;
+    margin-bottom: 54px;
+  }
+
+  .learn h2 span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+  }
+
+  .learn-feature {
+    border-radius: 149px;
+    background-color: #72383d;
+    padding: 8px 20px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px !important;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 92px !important;
+  }
+
+  .learn-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .learn-item {
+    background-color: #e0d8ce;
+    border-radius: 20px;
+    padding: 24px 23px 23px 34px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .learn-item img {
+    width: 40.59px;
+    height: 34.76px;
+  }
+
+  .learn-item-top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .learn-item-top img {
+    width: 75px;
+    height: 73px;
+  }
+
+  .learn-item h3 {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 29px;
+  }
+
+  .learn-item-text {
+    width: 211px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #686462;
+    text-align: left;
+    width: 100%;
+  }
 
 .hero {
   display: none;
@@ -391,10 +553,7 @@ nav {
   }
 
   .about {
-    background-color: #f8f2e6;
     padding: 40px 20px;
-    font-family: Arial, sans-serif;
-    text-align: center;
   }
 
   .about-inner {
@@ -408,10 +567,18 @@ nav {
     margin-bottom: 38px;
   }
 
-  .about p {
-    font-weight: 600;
-    font-size: 14px;
-    text-align: center;
+  .about-title-mob {
+    display: block;
+  }
+
+  .about-title-desc {
+    display: none;
+  }
+
+
+  .about-text {
+    font-size: 12px;
+    margin-bottom: 33px;
   }
 
   .about-content {
@@ -429,6 +596,19 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .about-item-content {
+    width: auto;
+  }
+
+  .about-item h3 {
+    font-size: 14px;
+  }
+
+  .about-item-text {
+    font-size: 12px;
+    text-align: center;
   }
 
   .icon {
@@ -481,14 +661,7 @@ nav {
   }
 
   .learn-feature {
-    border-radius: 149px;
-    background-color: #72383d;
-    padding: 8px 20px;
-    font-family: Inter;
-    font-weight: 400;
     font-size: 14px !important;
-    text-align: center;
-    color: #ffffff;
     margin-bottom: 28px !important;
   }
 
@@ -505,7 +678,7 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
-  .learn-item img {
+  .learn-item-top img {
     width: 40.59px;
     height: 34.76px;
   }
@@ -523,10 +696,7 @@ nav {
 
   .learn-item-text {
     width: 211px;
-    font-weight: 400;
     font-size: 12px;
-    color: #686462;
-    text-align: left;
   }
 
   .benefits {
