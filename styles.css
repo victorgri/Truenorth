@@ -131,7 +131,8 @@ header {
 }
 
 .header-desc-bottom-item img {
-  width: 20px;height: 15px;
+  width: 20px;
+  height: 15px;
 }
 
 .header-desc-bottom-item:nth-child(2) {
@@ -153,7 +154,7 @@ header {
 
 .about {
   background-color: #f8f2e6;
-  padding: 99px 144px;
+  padding: 99px 0 144px;
   font-family: Arial, sans-serif;
   text-align: center;
 }
@@ -166,7 +167,14 @@ header {
 }
 
 .about-title {
-  margin-bottom: 38px;
+  margin-bottom: 27px;
+}
+
+.about-subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  color: #000000;
 }
 
 .about-title-mob {
@@ -187,10 +195,12 @@ header {
   font-size: 20px;
   text-align: center;
   color: #74706d;
-  margin-bottom: 118px;
+  margin: 0 auto 118px;
+  width: 750px;
 }
 
 .about-content {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 26px;
@@ -198,26 +208,40 @@ header {
 }
 
 .about-item {
-  width: fit-content;
   background-color: #e0d8ce;
   border-radius: 20px;
-  padding: 20px;
+  padding: 20px 20px 20px 41px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 39px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .about-item-content {
-  width: 340px;
+  max-width: 395px;
 }
 
-.about-item img {
+.about-item-icon {
+  display: block;
   width: 50px;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #72383d;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.about-item-img-1 {
+  width: 21px;
+  height: 22px;
 }
 
 .about-item h3 {
+  text-align: left;
   font-weight: 700;
   font-size: 24px;
   color: #161c2d;
@@ -291,8 +315,13 @@ header {
 }
 
 .learn-item-top img {
-  max-width: 100%;
+  flex-shrink: 0;
+  width: 75px;
   height: 73px;
+}
+
+.learn-item-img-mob {
+  display: none;
 }
 
 .learn-item h3 {
@@ -313,9 +342,20 @@ header {
 /* #endregion */
 
 .benefits {
+  position: relative;
   background-color: #302b27;
 }
+
+.benefits-side {
+  top: 302px;
+  position: absolute;
+  width: 100%;
+  height: 430px;
+  background-color: #f8f2e6;
+  z-index: 1;
+}
 .benefits-inner {
+  position: relative;
   display: none;
 }
 
@@ -332,8 +372,64 @@ header {
 .benefits-side-card-top {
   background-color: #302b27;
   border-bottom-right-radius: 20px;
-  height: fit-content;
+  height: 302px;
   overflow: hidden;
+}
+
+.benefits-side-card-graph {
+  overflow: visible;
+  position: relative;
+  width: 270px;
+  height: 165px;
+  display: flex;
+  gap: 14px;
+  align-items: start;
+}
+
+.benefits-side-card-graph img {
+  flex-shrink: 0;
+  position: relative;
+  animation: moveUpDown 1s ease-in-out infinite;
+}
+
+.benefits-side-card-graph img:first-child {
+  top: 82px;
+  animation-delay: 0;
+}
+
+.benefits-side-card-graph img:nth-child(2) {
+  top: 57px;
+  animation-delay: 0.5s;
+}
+
+.benefits-side-card-graph img:nth-child(3) {
+  top: 67px;
+  animation-delay: 1s;
+}
+
+.benefits-side-card-graph img:nth-child(4) {
+  top: 51px;
+  animation-delay: 1.5s;
+}
+
+.benefits-side-card-graph img:nth-child(5) {
+  top: 61px;
+  animation-delay: 2s;
+}
+
+.benefits-side-card-graph img:nth-child(6) {
+  top: 37px;
+  animation-delay: 2.5s;
+}
+
+.benefits-side-card-graph img:nth-child(7) {
+  top: 66px;
+  animation-delay: 3s;
+}
+
+.benefits-side-card-graph img:nth-child(8) {
+  top: 41px;
+  animation-delay: 3.5s;
 }
 
 .right {
@@ -344,7 +440,7 @@ header {
 
 .benefits-side-card-bottom {
   background-color: #302b27;
-  height: 336px;
+  height: 347px;
   width: 100%;
   border-top-left-radius: 20px;
 }
@@ -356,6 +452,7 @@ header {
 }
 
 .benefits-side-card-middle {
+  background-color: #f8f2e6;
   overflow: hidden;
   padding-block: 40px;
 }
@@ -366,7 +463,7 @@ header {
 }
 
 .benefits-content-desc {
-  background-color: #efe9e1f0;
+  background-color: #f8f2e6;
   border-radius: 20px;
 }
 
@@ -378,6 +475,11 @@ header {
 }
 
 .benefits-side-card-title {
+  font-family: Staatliches;
+  font-weight: 600;
+  font-size: 28px;
+  color: #000000;
+
   margin: 29px 21px 23px 23px;
   height: fit-content;
 }
@@ -443,6 +545,10 @@ header {
   animation-delay: 0s;
 }
 
+.benefits-container {
+  position: relative;
+  z-index: 10;
+}
 .benefits-content-desc {
   padding: 20px 20px 40px;
   height: fit-content;
@@ -751,7 +857,7 @@ header {
 .review-spot {
   position: absolute;
   top: 25px;
-  right: 38px;
+  right: 35px;
   background-image: url(images/reviews/spot.png);
   background-repeat: no-repeat;
   display: block;
@@ -888,6 +994,7 @@ header {
   display: flex;
   align-items: center;
   overflow: hidden;
+  justify-content: space-between;
 }
 
 .faq-question-btn {
@@ -1037,7 +1144,7 @@ header {
 
 .certificate-text {
   font-size: 15px;
-  text-align: center;
+  text-align: left;
   color: #686462;
 }
 
@@ -1068,17 +1175,18 @@ form {
 }
 .contact-input input,
 .contact-input textarea {
+  font-size: 16px;
   background-color: #292624;
   color: #efe9e1;
   border: none;
   padding: 10px;
   width: 100%;
   border-radius: 13px;
-  padding: 20px 0 15px 20px;
+  padding: 23px 0 23px 20px;
 }
 
 .contact-input input {
-  height: 50px;
+  height: 66px;
 }
 
 .contact-input textarea {
@@ -1107,8 +1215,7 @@ form {
 }
 
 .contact-top-desc img {
-  width: 72px;
-  height: 49px;
+  flex-shrink: 0;
 }
 
 .contact-top-right img {
@@ -1195,7 +1302,9 @@ form {
 
 .footer-inner {
   position: relative;
-  padding: 111px 142px 0 162px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 111px 0 44px;
 }
 
 .footer-items {
@@ -1540,6 +1649,35 @@ nav {
     margin-bottom: 38px;
   }
 
+  .about-subtitle {
+    font-size: 14px;
+  }
+
+  .about-item-icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .about-item-img-1 {
+    width: 12px;
+    height: 14px;
+  }
+
+  .about-item-img-2 {
+    width: 14px;
+    height: 12px;
+  }
+
+  .about-item-img-3 {
+    width: 14px;
+    height: 10px;
+  }
+
+  .about-item-img-4 {
+    width: 12px;
+    height: 7px;
+  }
+
   .about-title-mob {
     display: block;
   }
@@ -1556,6 +1694,7 @@ nav {
   .about-content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 13.2px;
   }
 
@@ -1575,6 +1714,7 @@ nav {
   }
 
   .about-item h3 {
+    text-align: center;
     font-size: 14px;
   }
 
@@ -1648,10 +1788,17 @@ nav {
     padding: 24px 23px 23px 34px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+  .learn-item-img-mob {
+    display: block;
+  }
 
+  .learn-item-img-desc {
+    display: none;
+  }
   .learn-item-top img {
-    max-width: 100%;
-    height: 34.76px;
+    flex-shrink: 0;
+    width: 40px;
+    height: 35px;
   }
 
   .learn-item-top {
@@ -1673,6 +1820,10 @@ nav {
   .benefits {
     background-color: #efe9e1;
     padding: 46px 0 25px;
+  }
+
+  .benefits-side {
+    display: none;
   }
 
   .benefits-inner {
@@ -2211,5 +2362,17 @@ nav {
   100% {
     opacity: 1;
     top: 0;
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Піднімаємо на 10px */
+  }
+  100% {
+    transform: translateY(0);
   }
 }
