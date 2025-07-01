@@ -307,10 +307,13 @@ header {
   width: 100%;
 }
 /* #endregion */
+
+.benefits {
+  background-color: #302b27;
+}
 .benefits-inner {
   display: none;
 }
-
 
 .benefits-inner-desc {
   display: flex;
@@ -318,14 +321,15 @@ header {
 }
 
 .benefits-side-card {
+  background-color: #efe9e1f0;
   width: 330px;
-  height: 1214px;
 }
 
 .benefits-side-card-top {
-  background-color: #322d27;
+  background-color: #302b27;
   border-bottom-right-radius: 20px;
-  height: 400px;
+  height: fit-content;
+  overflow: hidden;
 }
 
 .right {
@@ -335,8 +339,8 @@ header {
 }
 
 .benefits-side-card-bottom {
-  background-color: #322d27;
-  height: 100px;
+  background-color: #302b27;
+  height: 336px;
   width: 100%;
   border-top-left-radius: 20px;
 }
@@ -344,21 +348,163 @@ header {
 .left {
   border-radius: 0;
   border-top-right-radius: 20px;
+  height: 347px;
 }
 
 .benefits-side-card-middle {
-  height: 378px;
+  overflow: hidden;
   padding-block: 40px;
-}
-
-.benefits-side-card-title {
-  width: 344px;
-  height: 100px;
 }
 
 .benefits-side-card-text {
   font-size: 15px;
   color: #686462;
+}
+
+.benefits-content-desc {
+  background-color: #efe9e1f0;
+  border-radius: 20px;
+}
+
+.benefits-side-card-innertext {
+  background-color: #efe9e1f0;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 350px;
+}
+
+.benefits-side-card-title {
+  margin: 29px 21px 23px 23px;
+  height: fit-content;
+}
+
+.benefits-side-card-text {
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 15px;
+  color: #686462;
+  margin: 0 31px 20px 27px;
+}
+
+.benefits-side-card-middle span {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  color: #686462;
+  margin: 0 0 56px 27px;
+}
+.numbers {
+  position: relative;
+  width: 100%;
+  height: 130px;
+}
+
+.number-1,
+.number-2,
+.number-3,
+.number-4,
+.number-5 {
+  position: absolute;
+  opacity: 0;
+  animation: fadeInOut 5s infinite;
+}
+
+.number-1 {
+  top: 10px;
+  left: 20px;
+  animation-delay: 1.5s;
+}
+
+.number-2 {
+  top: 20px;
+  right: 20px;
+  animation-delay: 2s;
+}
+
+.number-3 {
+  top: 50px;
+  left: 100px;
+  animation-delay: 1s;
+}
+
+.number-4 {
+  bottom: 10px;
+  left: 20px;
+  animation-delay: 0.5s;
+}
+
+.number-5 {
+  bottom: 10px;
+  right: 20px;
+  animation-delay: 0s;
+}
+
+.benefits-content-desc {
+  padding: 20px 20px 40px;
+  height: fit-content;
+}
+
+.benefits-title {
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+  color: #322d29;
+}
+
+.benefits-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin: 0;
+}
+
+.benefit-card {
+  background-color: #e0d8ce;
+  display: flex;
+  align-items: end;
+  gap: 13px;
+  border-radius: 20px;
+  padding: 53px 30px 30px 30px;
+}
+
+.benefit-card:first-child {
+  background-color: #322d29;
+}
+
+.benefit-card:first-child h3 {
+  font-size: 22px;
+  color: #ffffff;
+}
+.benefit-card:first-child p {
+  color: #ac9c8d;
+  font-size: 15px;
+}
+
+.benefit-card h3 {
+  font-size: 22px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.benefit-card p {
+  font-size: 15px;
+  color: #686462;
+}
+
+.benefit-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.benefits-card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 270px;
+}
+
+.benefits-card-arrow {
+  width: 50px;
+  height: 50px;
 }
 
 /* #region pricing */
@@ -457,8 +603,17 @@ header {
 }
 
 .pricing-card-part {
+  cursor: pointer;
   padding: 33px 31px 0 29px;
   border-bottom: 1px solid #efe9e1;
+}
+
+.pricing-card:hover .pricing-card-part {
+  background-color: #221c18;
+}
+
+.pricing-card:last-child:hover .pricing-card-part {
+  background-color: #1e18140f;
 }
 
 .pricing-card-part h4 {
@@ -471,7 +626,25 @@ header {
 .pricing-card-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 50px 30px 30px 30px;
+}
+
+.pricing-card-bottom:hover {
+  cursor: pointer;
+  background-color: #1e1814;
+}
+
+.pricing-card-bottom img {
+  transition: transform 0.3s ease;
+}
+
+.pricing-card-bottom:hover img {
+  transform: rotate(140deg);
+}
+
+.exclusive .pricing-card-bottom:hover {
+  background-color: #1e18140f;
 }
 
 .pricing-card-link {
@@ -511,6 +684,7 @@ header {
 .exclusive .pricing-card-part {
   border-bottom: 1px solid #000000;
 }
+
 /* #endregion */
 
 /* #region reviews */
@@ -624,6 +798,7 @@ header {
 }
 
 .faq-content {
+  overflow: hidden;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -665,6 +840,68 @@ header {
   top: 475px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.faq-questions {
+  position: relative;
+  top: 124px;
+  margin: 62px 0 117px;
+  width: 529px;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.faq-question-btn {
+  border: 1px solid #d1c7bd;
+  padding: 8.4px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: all 0.5s;
+}
+
+.faq-question-btn.active-btn {
+  background-color: #72383d;
+  transform: rotate(180deg);
+  border: none;
+}
+
+.faq-question-question {
+  font-weight: 500;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.faq-question-answer {
+  font-weight: 400;
+  font-size: 15px;
+  color: #ffffff;
+  position: relative;
+  padding-left: 15px;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.faq-question-answer.visible {
+  opacity: 1;
+}
+
+.faq-question-answer::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #72383d;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
 .accordion {
@@ -1447,6 +1684,7 @@ nav {
 
   .benefits-light-card-bottom img:first-child {
     left: 25px;
+    animation: numbers 1s infinite;
   }
 
   .benefits-light-card-bottom img:last-child {
@@ -1466,8 +1704,6 @@ nav {
   }
 
   .benefits-cards {
-    display: flex;
-    flex-direction: column;
     gap: 9px;
     margin-bottom: 30px;
   }
@@ -1609,56 +1845,79 @@ nav {
   }
 
   .faq-inner {
-    padding: 64px 0 54px;
+    padding: 0;
   }
 
-  .faq-title {
+  .faq-inner-desc {
+    display: none;
+  }
+
+  .faq-mob {
+    padding: 60px 0 54px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+  }
+
+  .faq-mob-title {
+    font-weight: 600;
     font-size: 24px;
-    margin-bottom: 31px;
+    color: #ffffff;
+    text-align: center;
   }
 
-  .faq-title-mob {
-    display: block;
-  }
-
-  .faq-owner {
+  .faq-mob-img {
+    position: relative;
+    background-image: url(images/faq/faq.png);
+    background-repeat: no-repeat;
     width: 306px;
     height: 383px;
     margin: 0 auto;
-    background-image: url(images/faq/faq.png);
+    border-radius: 20px;
   }
 
-  .faq-logo-holder {
+  .faq-mob-logo {
+    position: absolute;
+    top: 290px;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .faq-mob-logoholder {
     position: absolute;
     top: 273px;
     left: 0;
     width: 100%;
   }
 
-  .faq-logo {
-    position: absolute;
-    top: 290px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .accordion {
-    justify-content: space-between;
-    gap: 0;
-    align-items: center;
+  .faq-questions {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
   }
 
-  .accordion.active img {
-    transform: rotateX(180deg);
+  .faq-question-question {
+    font-size: 16px;
+    gap: 13px;
   }
 
-  .panel {
-    padding: 0 18px;
-    display: none;
-    background-color: #302b27;
-    overflow: hidden;
+  .faq-question-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .faq-question-text p {
+    margin: 0;
+  }
+
+  .faq-question-answer {
     font-size: 14px;
-    letter-spacing: 0%;
-    color: #ffffff;
   }
 
   /* #endregion */
@@ -1887,5 +2146,26 @@ nav {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0; /* Спочатку і в кінці елемент зникає */
+  }
+  50% {
+    opacity: 1; /* В середині анімації елемент з'являється */
+  }
+}
+
+@keyframes numbers {
+  0% {
+    opacity: 0;
+    top: 20px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
   }
 }

@@ -8,18 +8,14 @@ document.getElementById('menu-close').addEventListener('click', () => {
   navLinks.classList.remove('active');
 });
 
-const acc = document.getElementsByClassName("accordion");
-for (let i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    const panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
+document.querySelectorAll('.faq-question-btn').forEach(button => {
+  button.addEventListener('click', function() {
+    this.classList.toggle('active-btn')
+    const answer = this.closest('.faq-question').querySelector('.faq-question-answer');
+    answer.classList.toggle('visible'); 
   });
-}
+});
+
 
 function changeImage(button) {
   const img = button.querySelector("img");
