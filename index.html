@@ -64,7 +64,7 @@
                 🔒Secure Payments via Stripe
               </p>
               <p class="header-desc-bottom-item">
-                Canadian-based Company
+                <span><img src="images/icons/ca.png" alt=""></span> Canadian-based Company
               </p>
               <p class="header-desc-bottom-item">
                 🎯No Advice, Education Only
@@ -92,13 +92,13 @@
             </div>
             <ul>
               <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Learn</a></li>
-              <li><a href="#">Benefits</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Reviews</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#learn">Learn</a></li>
+              <li><a href="#benefits">Benefits</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#reviews">Reviews</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#contact">Contact</a></li>
               <p class="nav-footer">2025 TrueNorth. All rights reserved.</p>
             </ul>
           </div>
@@ -116,13 +116,13 @@
             educational, no financial advice.</p>
           <button class="hero-button">
             <span>Start Learning Now</span>
-            <img src="images/icons/hero-btn-img.png" alt="Start learning button">
+            <img src="images/hero/hero-btn-img.png" alt="Start learning button">
           </button>
 
           <div class="hero-bottom">
             <img src="images/hero/hero-image-1.svg" alt="Payments" class="hero-bottom-item">
-            <img src="images/hero/hero-image-1.svg" alt="Payments" class="hero-bottom-item">
-            <img src="images/hero/hero-image-1.svg" alt="Payments" class="hero-bottom-item">
+            <img src="images/hero/hero-image-2.svg" alt="Payments" class="hero-bottom-item">
+            <img src="images/hero/hero-image-3.svg" alt="Payments" class="hero-bottom-item">
           </div>
         </div>
       </div>
@@ -502,7 +502,7 @@
                 </ul>
               </div>
               <div class="pricing-card-bottom">
-                <a href="#form" class="pricing-card-link">Start Learning</a>
+                <a href="#contact" class="pricing-card-link">Start Learning</a>
                 <img src="images/pricing/arrow.svg" alt="arrow">
               </div>
             </div>
@@ -523,7 +523,7 @@
                 </ul>
               </div>
               <div class="pricing-card-bottom">
-                <a href="#form" class="pricing-card-link">Start Learning</a>
+                <a href="#contact" class="pricing-card-link">Start Learning</a>
                 <img src="images/pricing/arrow.svg" alt="arrow">
               </div>
             </div>
@@ -544,7 +544,7 @@
                 </ul>
               </div>
               <div class="pricing-card-bottom">
-                <a href="#form" class="pricing-card-link">Start Learning</a>
+                <a href="#contact" class="pricing-card-link">Start Learning</a>
                 <img src="images/pricing/arrow.svg" alt="arrow">
               </div>
             </div>
@@ -566,7 +566,7 @@
                 </ul>
               </div>
               <div class="pricing-card-bottom">
-                <a href="#form" class="pricing-card-link">Start Learning</a>
+                <a href="#contact" class="pricing-card-link">Start Learning</a>
                 <img src="images/pricing/arrow.svg" alt="arrow">
               </div>
             </div>
@@ -585,6 +585,9 @@
 
           <div class="reviews-content">
             <div class="reviews-card">
+              <div class="review-spot">
+                <p class="reviev-spot-number">$8K</p>
+              </div>
               <img class="review-mark" src="images/reviews/review-1-mark.png" alt="">
               <img class="review-person" src="images/reviews/person1.png" alt="">
 
@@ -604,7 +607,10 @@
               </div>
             </div>
             <div class="reviews-card">
-              <img class="review-mark" src="images/reviews/review-2-mark.png" alt="">
+              <div class="review-spot">
+                <p class="reviev-spot-number">$25K</p>
+              </div>
+              <img class="review-mark" src="images/reviews/review-1-mark.png" alt="">
               <img class="review-person" src="images/reviews/person2.png" alt="">
 
               <img class="review-name" src="images/reviews/MichaelS.png" alt="">
@@ -623,7 +629,10 @@
               </div>
             </div>
             <div class="reviews-card">
-              <img class="review-mark" src="images/reviews/review-3-mark.png" alt="">
+              <div class="review-spot">
+                <p class="reviev-spot-number">$5K</p>
+              </div>
+              <img class="review-mark" src="images/reviews/review-1-mark.png" alt="">
               <img class="review-person" src="images/reviews/person3.png" alt="">
 
               <img class="review-name" src="images/reviews/AlexT.png" alt="">
@@ -797,13 +806,13 @@
           </div>
 
           <div class="contact-content">
-            <form>
+            <form id="contactForm">
               <div class="form-top">
                 <label class="contact-input">
-                  <input id="name" type="text" placeholder="Your name">
+                  <input id="name" type="text" placeholder="Your name" required>
                 </label>
                 <label class="contact-input">
-                  <input id="email" type="email" placeholder="Email">
+                  <input id="email" type="email" placeholder="Email" required>
                 </label>
               </div>
               <label class="contact-input message">

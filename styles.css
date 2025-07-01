@@ -130,6 +130,10 @@ header {
   margin: 0;
 }
 
+.header-desc-bottom-item img {
+  width: 20px;height: 15px;
+}
+
 .header-desc-bottom-item:nth-child(2) {
   padding-inline: 106px;
   border-left: 1px solid #ffffff;
@@ -277,7 +281,7 @@ header {
 }
 
 .learn-item img {
-  width: 40.59px;
+  max-width: 100%;
   height: 34.76px;
 }
 
@@ -287,7 +291,7 @@ header {
 }
 
 .learn-item-top img {
-  width: 75px;
+  max-width: 100%;
   height: 73px;
 }
 
@@ -732,13 +736,40 @@ header {
   padding: 63px 30px 38px 38px;
   background-color: #d9d0c6;
   border-radius: 20px;
+  overflow: visible;
 }
 
 .review-mark {
+  display: block;
+  z-index: 1000;
   position: absolute;
-  top: -15px;
+  top: -10px;
   right: -100px;
   animation: rotate 5s linear infinite;
+}
+
+.review-spot {
+  position: absolute;
+  top: 25px;
+  right: 38px;
+  background-image: url(images/reviews/spot.png);
+  background-repeat: no-repeat;
+  display: block;
+  width: 76px;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviev-spot-number {
+  position: absolute;
+  top: 23px;
+  font-weight: 900;
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  transform: rotate(12deg);
 }
 
 .review-person {
@@ -795,6 +826,10 @@ header {
 .faq-inner {
   position: relative;
   padding: 178px 0 135px;
+}
+
+.faq-mob {
+  display: none;
 }
 
 .faq-content {
@@ -1143,6 +1178,12 @@ form {
   vertical-align: middle;
   text-decoration: underline;
   color: #000000;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
 }
 /* #endregion */
 
@@ -1609,7 +1650,7 @@ nav {
   }
 
   .learn-item-top img {
-    width: 40.59px;
+    max-width: 100%;
     height: 34.76px;
   }
 
@@ -2111,8 +2152,11 @@ nav {
     margin-bottom: 16px;
   }
 
+  .footer-inner-bottom {
+    display: block;
+  }
+
   .footer-links {
-    border-top: 1px solid #ac9c8d;
     display: flex;
     gap: 33px;
     align-items: center;
@@ -2132,9 +2176,9 @@ nav {
   }
 
   .footer-created-at {
+    padding-left: 20px;
     font-weight: 500;
     font-size: 10px;
-    padding-left: 20px;
   }
 
   /* #endregion */
