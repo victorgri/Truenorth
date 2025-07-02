@@ -386,10 +386,24 @@ header {
   align-items: start;
 }
 
+
 .benefits-side-card-graph img {
   flex-shrink: 0;
   position: relative;
   animation: moveUpDown 1s ease-in-out infinite;
+}
+
+.graph img {
+  width: 100%;
+  height: auto;
+}
+
+.graph {
+  padding-left: 20px;
+}
+
+.graph-img {
+  top: 0 !important;
 }
 
 .benefits-side-card-graph img:first-child {
