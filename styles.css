@@ -1461,21 +1461,6 @@ nav {
   color: #a3a3a3;
 }
 
-/* .hero {
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.hero-content {
-  text-align: center;
-  color: white;
-  max-width: 800px;
-} */
-
 .hero h2 {
   font-size: 36px;
   font-weight: bold;
@@ -1507,7 +1492,7 @@ nav {
     display: none;
   }
   .container {
-    padding-inline: 8px;
+    padding-inline: 14px;
     margin: 0 auto;
   }
 
@@ -1534,7 +1519,7 @@ nav {
   .nav-links {
     position: fixed;
     top: 0;
-    right: -320px;
+    right: 100%;
     background-color: #f4f1eb;
     width: 66vw;
     padding: 35px 20px 32px;
@@ -1849,6 +1834,8 @@ nav {
   }
 
   .benefits-light-card {
+    width: 290px;
+    margin: 0 auto;
     background-color: #e0d8ce;
     border-radius: 20px;
     padding: 29px 43px 27px 31px;
