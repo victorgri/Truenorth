@@ -1186,9 +1186,14 @@ form {
 .contact-content {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: row-reverse;
   width: 100%;
   gap: 54px;
+}
+
+.contact-content-left {
+  flex-shrink: 0;
 }
 
 .contact-input {
@@ -1526,7 +1531,7 @@ nav {
   .nav-links {
     position: fixed;
     top: 0;
-    right: 100%;
+    right: -100%;
     background-color: #f4f1eb;
     width: 66vw;
     padding: 35px 20px 32px;
