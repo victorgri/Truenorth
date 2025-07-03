@@ -170,4 +170,124 @@ function animate() {
 
 animate();
 
+const chartCanvas = document.getElementById('chart');
+const ctx2 = chartCanvas.getContext('2d');
 
+// Установка фиксированных размеров
+const W = 263;
+const H = 165;
+chartCanvas.width = W;
+chartCanvas.height = H;
+
+const candleWidth = 17;
+const candleGap = 16;
+const maxCandles = Math.floor(W / (candleWidth + candleGap));
+const centerY = H / 2;
+
+const wickTopLengthMin = 5;
+const wickTopLengthMax = 20;
+const wickBottomLengthMin = 5;
+const wickBottomLengthMax = 20;
+
+const growthSpeed = 20;
+
+let candles = [];
+
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function generateCandle() {
+  return {
+    direction: Math.random() < 0.5 ? 'up' : 'down',
+    bodyHeight: randomInt(growthSpeed * 1, growthSpeed * 4),
+    wickTop: randomInt(wickTopLengthMin, wickTopLengthMax),
+    wickBottom: randomInt(wickBottomLengthMin, wickBottomLengthMax),
+    drawnHeight: 0,
+  };
+}
+
+function drawCandle(index) {
+  const c = candles[index];
+  const x = index * (candleWidth + candleGap);
+  ctx2.lineWidth = 2;
+  const halfWidth = candleWidth / 2;
+
+  let color = c.direction === 'up' ? '#26a69a' : '#ef5350';
+  ctx2.strokeStyle = color;
+  ctx2.fillStyle = color;
+
+  ctx2.beginPath();
+
+  let progress = c.drawnHeight / c.bodyHeight;
+
+  if (c.direction === 'up') {
+    let wickTopCurrent = c.wickTop * progress;
+    let topY = centerY - c.drawnHeight - wickTopCurrent;
+    let wickBottomCurrent = c.wickBottom * progress;
+    let bottomY = centerY + wickBottomCurrent;
+
+    ctx2.moveTo(x + halfWidth, centerY);
+    ctx2.lineTo(x + halfWidth, bottomY);
+    ctx2.moveTo(x + halfWidth, centerY - c.drawnHeight);
+    ctx2.lineTo(x + halfWidth, topY);
+    ctx2.stroke();
+
+    ctx2.fillRect(x, centerY - c.drawnHeight, candleWidth, c.drawnHeight);
+  } else {
+    let wickTopCurrent = c.wickTop * progress;
+    let topY = centerY - wickTopCurrent;
+    let wickBottomCurrent = c.wickBottom * progress;
+    let bottomY = centerY + c.drawnHeight + wickBottomCurrent;
+
+    ctx2.moveTo(x + halfWidth, topY);
+    ctx2.lineTo(x + halfWidth, centerY);
+    ctx2.moveTo(x + halfWidth, centerY + c.drawnHeight);
+    ctx2.lineTo(x + halfWidth, bottomY);
+    ctx2.stroke();
+
+    ctx2.fillRect(x, centerY, candleWidth, c.drawnHeight);
+  }
+}
+
+function redraw() {
+  ctx2.clearRect(0, 0, W, H);
+  for(let i=0; i<candles.length; i++) {
+    drawCandle(i);
+  }
+}
+
+function animateCandle(index, callback) {
+  const c = candles[index];
+  let lastTime = performance.now();
+
+  function step(time) {
+    let delta = (time - lastTime) / 1000;
+    lastTime = time;
+
+    c.drawnHeight += growthSpeed * delta;
+    if (c.drawnHeight > c.bodyHeight) c.drawnHeight = c.bodyHeight;
+
+    redraw();
+
+    if (c.drawnHeight < c.bodyHeight) {
+      requestAnimationFrame(step);
+    } else {
+      callback && callback();
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+function loop() {
+  if (candles.length < maxCandles) {
+    candles.push(generateCandle());
+    animateCandle(candles.length -1, loop);
+  } else {
+    candles.shift();
+    candles.push(generateCandle());
+    animateCandle(candles.length -1, loop);
+  }
+}
+
+loop();
