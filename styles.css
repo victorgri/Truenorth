@@ -341,6 +341,7 @@ header {
 }
 /* #endregion */
 
+/* #region benefits */
 .benefits {
   position: relative;
   background-color: #302b27;
@@ -369,6 +370,25 @@ header {
   width: 330px;
 }
 
+.wave-container {
+  padding-left: 20px;
+  position: relative;
+  width: 309px;
+  height: 157px;
+}
+.grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+#waveCanvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 .benefits-side-card-top {
   background-color: #302b27;
   border-bottom-right-radius: 20px;
@@ -386,64 +406,70 @@ header {
   align-items: start;
 }
 
-
-.benefits-side-card-graph img {
-  flex-shrink: 0;
-  position: relative;
-  animation: moveUpDown 1s ease-in-out infinite;
-}
-
 .graph img {
   width: 100%;
   height: auto;
+  animation: none;
 }
 
-.graph {
+.chart {
   padding-left: 20px;
 }
 
 .graph-img {
   top: 0 !important;
+  animation: none !important;
+}
+
+.benefits-side-card-graph img {
+  flex-shrink: 0;
+  position: relative;
+  animation: waveMotion 3s ease-in-out infinite;
 }
 
 .benefits-side-card-graph img:first-child {
   top: 82px;
-  animation-delay: 0;
+  animation-delay: 0s;
 }
 
 .benefits-side-card-graph img:nth-child(2) {
   top: 57px;
-  animation-delay: 0.5s;
+  animation-delay: 0.25s;
 }
 
 .benefits-side-card-graph img:nth-child(3) {
   top: 67px;
-  animation-delay: 1s;
+  animation-delay: 0.5s;
 }
 
 .benefits-side-card-graph img:nth-child(4) {
   top: 51px;
-  animation-delay: 1.5s;
+  animation-delay: 0.75s;
 }
 
 .benefits-side-card-graph img:nth-child(5) {
   top: 61px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 .benefits-side-card-graph img:nth-child(6) {
   top: 37px;
-  animation-delay: 2.5s;
+  animation-delay: 1.25s;
 }
 
 .benefits-side-card-graph img:nth-child(7) {
   top: 66px;
-  animation-delay: 3s;
+  animation-delay: 1.5s;
 }
 
 .benefits-side-card-graph img:nth-child(8) {
   top: 41px;
-  animation-delay: 3.5s;
+  animation-delay: 1.75s;
+}
+
+.benefits-side-card-graph img:nth-child(9) {
+  top: 50px;
+  animation-delay: 2s;
 }
 
 .right {
@@ -631,6 +657,8 @@ header {
   height: 50px;
 }
 
+/* #endregion */
+
 /* #region pricing */
 .pricing {
   background-color: #302b27;
@@ -702,7 +730,7 @@ header {
   height: 435px;
 }
 
-@media (min-width:1400px) {
+@media (min-width: 1400px) {
   .middle {
     height: 350px;
   }
@@ -856,6 +884,7 @@ header {
 }
 
 .reviews-card {
+  min-height: 585px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -923,14 +952,13 @@ header {
 }
 
 .review-bottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.review-bottom-last {
-  position: absolute;
-  bottom: 40px;
 }
 
 .review-line {
@@ -2377,12 +2405,18 @@ nav {
   }
 }
 
-@keyframes moveUpDown {
+@keyframes waveMotion {
   0% {
     transform: translateY(0);
   }
-  50% {
+  25% {
     transform: translateY(-10px); /* Піднімаємо на 10px */
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(10px); /* Спускаємо на 10px */
   }
   100% {
     transform: translateY(0);
