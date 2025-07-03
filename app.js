@@ -91,11 +91,11 @@ const baseWavePoints = [0, 60, 80, 30, 160, 90, 240, 40, 320, 100, 400, 60, 512,
 
 // Хвильові параметри
 const wave1 = {
-  color: "green",
+  color: "#31931A",
 };
 
 const wave2 = {
-  color: "red",
+  color: "#BE3B46",
 };
 
 // Генерація точок з анімацією + модифікація (зліва-нижче, справа-вище)
@@ -213,7 +213,7 @@ function drawCandle(index) {
   ctx2.lineWidth = 2;
   const halfWidth = candleWidth / 2;
 
-  let color = c.direction === 'up' ? '#26a69a' : '#ef5350';
+  let color = c.direction === 'up' ? '#31931A' : '#BE3B46';
   ctx2.strokeStyle = color;
   ctx2.fillStyle = color;
 
