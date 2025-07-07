@@ -20,8 +20,6 @@ body {
 }
 /* #region done */
 header {
-  background-color: #f8f2e6;
-
   overflow-x: hidden;
 }
 
@@ -35,7 +33,6 @@ header {
   padding-top: 17px;
   display: block;
   background-image: url(images/Hero.jpg);
-  background-repeat: no-repeat;
   background-position: center;
   padding-bottom: 29px;
 }
@@ -159,7 +156,6 @@ header {
 }
 
 .about {
-  background-color: #f8f2e6;
   padding: 99px 0 144px;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -490,8 +486,9 @@ header {
 }
 
 .benefits-side-card-bottom {
+  overflow: hidden;
   background-color: #302b27;
-  height: 347px;
+  height: 100%;
   width: 100%;
   border-top-left-radius: 20px;
 }
@@ -499,7 +496,7 @@ header {
 .left {
   border-radius: 0;
   border-top-right-radius: 20px;
-  height: 347px;
+
 }
 
 .benefits-side-card-middle {
