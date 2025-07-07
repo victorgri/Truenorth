@@ -12,9 +12,15 @@ body {
   overflow-x: hidden;
   margin: 0;
 }
+
+@media (min-width:1200px) {
+  .container {
+    max-width: 1263px;
+  }
+}
 /* #region done */
 header {
-  background-color: #efe9e1;
+  background-color: #f8f2e6;
 
   overflow-x: hidden;
 }
@@ -29,8 +35,8 @@ header {
   padding-top: 17px;
   display: block;
   background-image: url(images/Hero.jpg);
+  background-repeat: no-repeat;
   background-position: center;
-  /* aspect-ratio: 2/1; */
   padding-bottom: 29px;
 }
 
@@ -74,7 +80,7 @@ header {
 
 .header-desc-bottom {
   color: #ffffff;
-  padding-left: 80px;
+  padding-inline: 80px;
 }
 .header-desc-title {
   font-weight: 800;
@@ -208,7 +214,7 @@ header {
 }
 
 .about-item {
-  background-color: #e0d8ce;
+  background-color: #E0D8CE;
   border-radius: 20px;
   padding: 20px 20px 20px 41px;
   display: flex;
@@ -217,6 +223,10 @@ header {
   gap: 39px;
   max-width: 100%;
   max-height: 100%;
+}
+
+.about-icon-mob {
+  display: none;
 }
 
 .about-item-content {
@@ -315,9 +325,10 @@ header {
 }
 
 .learn-item-top img {
+  position: relative;
   flex-shrink: 0;
-  width: 75px;
-  height: 73px;
+  max-width: 92px;
+  max-height: 73px;
 }
 
 .learn-item-img-mob {
@@ -679,6 +690,7 @@ header {
 }
 
 .pricing-cards {
+  justify-content: center;
   display: flex;
   flex-direction: row;
   gap: 22px;
@@ -727,26 +739,24 @@ header {
 }
 
 .middle {
-  height: 435px;
-}
-
-@media (min-width: 1400px) {
-  .middle {
-    height: 350px;
-  }
+  overflow: hidden;
+  max-height: 334px;
+  padding: 30px 16px 124px 29px !important;
 }
 
 .pricing-card ul {
   list-style-type: disc;
-  padding-left: 10px;
+  padding-left: 2px;
 }
 .pricing-card li {
   position: relative;
   padding-left: 20px;
 
   font-weight: 500;
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 15px;
+  color: #998474;
+  text-wrap: nowrap;
 }
 
 .pricing-card li::before {
@@ -785,8 +795,8 @@ header {
 .pricing-card-bottom {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 50px 30px 30px 30px;
+  align-items: stretch;
+  padding: 32px 30px 30px 30px;
 }
 
 .pricing-card-bottom:hover {
@@ -795,6 +805,7 @@ header {
 }
 
 .pricing-card-bottom img {
+  flex-shrink: 0;
   transition: transform 0.3s ease;
 }
 
@@ -1692,29 +1703,22 @@ nav {
     font-size: 14px;
   }
 
+  .about-item {
+    max-width: 239px;
+  }
+
   .about-item-icon {
     width: 29px;
     height: 29px;
   }
 
-  .about-item-img-1 {
-    width: 12px;
-    height: 14px;
+  .about-icon-mob {
+    margin-bottom: -33px;
+    display: block;
   }
 
-  .about-item-img-2 {
-    width: 14px;
-    height: 12px;
-  }
-
-  .about-item-img-3 {
-    width: 14px;
-    height: 10px;
-  }
-
-  .about-item-img-4 {
-    width: 12px;
-    height: 7px;
+  .about-item-icon {
+    display: none;
   }
 
   .about-title-mob {
@@ -1754,9 +1758,11 @@ nav {
   .about-item h3 {
     text-align: center;
     font-size: 14px;
+    margin-bottom: 5px;
   }
 
   .about-item-text {
+    margin: 0;
     font-size: 12px;
     text-align: center;
   }
@@ -1834,6 +1840,7 @@ nav {
     display: none;
   }
   .learn-item-top img {
+    position: static;
     flex-shrink: 0;
     width: 40px;
     height: 35px;
@@ -1848,9 +1855,12 @@ nav {
     font-weight: 700;
     font-size: 16px;
     text-align: left;
+    margin-bottom: 13px;
+    max-width: 236px;
   }
 
   .learn-item-text {
+    margin: 0;
     width: 211px;
     font-size: 12px;
   }
@@ -2008,6 +2018,35 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 22px;
+    align-items: center;
+  }
+
+  .pricing-card {
+    overflow: hidden;
+    max-height: 619px;
+    max-width: 300px;
+  }
+
+  .pricing-card ul {
+    padding-left: 2.3px;
+  }
+
+  .middle {
+    padding: 30px 13px 0 31px !important;
+  }
+
+  .pricing-card li {
+    text-wrap: nowrap;
+    font-size: 15px;
+  }
+
+  .middle {
+    max-height: 258px;
+    overflow: hidden;
+  }
+
+  .pricing-card-bottom {
+    align-items: start;
   }
 
   /* #endregion */
@@ -2060,10 +2099,6 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .review-bottom-last {
-    position: static;
   }
   /* #endregion */
   /* #region faq */
@@ -2333,6 +2368,14 @@ nav {
   .footer-itemname {
     font-size: 16px;
     margin-bottom: 11px;
+  }
+
+  .footer-items > :nth-last-child(1) {
+    position: static;
+  }
+
+  .footer-items > :nth-last-child(2) {
+    position: static;
   }
 
   .footer-item-text {
