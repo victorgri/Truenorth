@@ -1641,6 +1641,7 @@ nav {
   }
 
   .hero-title {
+    overflow: hidden;
     font-weight: 800;
     font-size: 30px;
     line-height: 30px;
@@ -1730,6 +1731,7 @@ nav {
   }
 
   .about-text {
+    width: fit-content;
     font-size: 12px;
     margin-bottom: 33px;
   }
