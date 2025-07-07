@@ -373,7 +373,7 @@ header {
 }
 
 .benefits-side-card {
-  background-color: #efe9e1f0;
+  background-color: #f8f2e6;
   width: 330px;
 }
 
@@ -523,6 +523,7 @@ header {
 }
 
 .benefits-side-card-title {
+  overflow: hidden;
   font-family: Staatliches;
   font-weight: 600;
   font-size: 28px;
@@ -1535,7 +1536,7 @@ nav {
 }
 
 /* Mobile View */
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1199px) {
   .header-desc {
     display: none;
   }
@@ -1902,6 +1903,7 @@ nav {
   }
 
   .benefits-card-title {
+    overflow: hidden;
     font-family: Staatliches;
     font-weight: 400;
     font-size: 28px;
