@@ -1535,7 +1535,7 @@ nav {
 }
 
 /* Mobile View */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1180px) {
   .header-desc {
     display: none;
   }
@@ -1558,6 +1558,11 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+  }
+
+  .menu-button img {
+    overflow: hidden;
   }
 
   .menu-toggle-icon {
